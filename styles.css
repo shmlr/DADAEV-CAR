@@ -22,3 +22,13 @@
 /* Optional integration controls stay hidden until an actual destination is configured. */
 [hidden]{display:none!important}
 
+
+/* Partially recovered DADAEV CAR inventory: neutral imagery, no false vehicle photos. */
+.category-label{color:#e2c28b;font-size:12px;letter-spacing:.07em;margin:-7px 0 12px;text-align:center}
+.model-heading h2{white-space:normal;overflow-wrap:break-word;font-size:clamp(21px,5.7vw,27px);line-height:1.16}
+.spec-grid .glass-panel strong{white-space:normal;overflow-wrap:anywhere;font-size:11px;line-height:1.2}
+.car-visual img,.review-preview>img{object-position:center;object-fit:contain;background:radial-gradient(ellipse at 50% 54%,#38342e,#171512 78%)}
+.archive-note{font-size:10px;line-height:1.5;text-align:center;margin:2px 19px 11px;color:#baa989}
+.slide-dots{gap:5px;max-width:100%;padding:0 7px;box-sizing:border-box}
+.slide-dots button{width:5px;height:6px;flex-shrink:0}
+.slide-dots button.active{width:18px}

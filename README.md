@@ -66,3 +66,17 @@ assets/
 На сайте с 12.11.2026 отображаются **16 названий автомобилей**, прочитанных из поисково-индексированной копии старого каталога (из заявленных 18 карточек). Список и категории сохранены в `archive/indexed_catalog_2026-11-12.md`. **Это не подтверждённое текущее наличие.**
 
 Отображается нейтральная иллюстрация-заглушка `assets/car-placeholder.svg`, а не фото конкретной модели: оригинальные фотографии пока недоступны. Не подменять её фото случайных автомобилей из интернета. Год, характеристики и стоимость без подтверждения указаны как «Уточняется» или «По запросу». Внешняя ссылка на `dadaevcar.ru` не показывается на сайте.
+
+## Проверенные фото из Telegram @dadaevcar (12.11.2026)
+
+Фотографии загружены в `assets/cars/`. Они опубликованы в канале [@dadaevcar](https://t.me/dadaevcar). Текущее наличие автомобилей и права на коммерческое использование изображений требуют отдельного подтверждения владельцем. Из 16 восстановленных карточек 7 показывают фото, остальные 9 пока используют нейтральную заглушку.
+
+| Автомобиль | Публикация | Файл | Сопоставление |
+|---|---|---|---|
+| Hyundai Solaris II (2021) | [Telegram post 64](https://t.me/dadaevcar/64) | `hyundai-solaris-ii.webp` | Подписана модель |
+| Hyundai Solaris 1.6 AT Prestige | [Telegram post 84](https://t.me/dadaevcar/84) | `hyundai-solaris.webp` | Подписана модель |
+| Hyundai Creta 2.0 AT | [Telegram post 93](https://t.me/dadaevcar/93) | `hyundai-creta.webp` | Подписана модель |
+| Toyota Camry 75 | [Telegram post 103](https://t.me/dadaevcar/103) | `toyota-camry-75.webp` | Подписана модель |
+| Toyota Camry 55 (по внешнему виду) | [Telegram post 113](https://t.me/dadaevcar/113) | `toyota-camry-55.webp` | [Inference] Определено по фото, проверить у владельца |
+| Hyundai Grand Starex (по внешнему виду) | [Telegram post 121](https://t.me/dadaevcar/121) | `hyundai-grand-starex.webp` | [Inference] Определено по фото, проверить у владельца |
+| Volkswagen Polo (по внешнему виду) | [Telegram post 74](https://t.me/dadaevcar/74) | `volkswagen-polo.webp` | [Inference] Определено по фото, проверить у владельца |

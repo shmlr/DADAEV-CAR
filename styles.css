@@ -21,3 +21,6 @@
 
 /* Optional integration controls stay hidden until an actual destination is configured. */
 [hidden]{display:none!important}
+
+/* Link to published fleet while demo carousel is being reconciled with WhatsApp catalog. */
+.fleet-external{display:block;margin:12px 0 2px;text-align:center;color:#e5c88d;font-size:12px;line-height:1.45;text-decoration:underline;text-underline-offset:3px}

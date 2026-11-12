@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12110f">
+  <meta name="description" content="DADAEV CAR — интерактивный каталог аренды автомобилей и оформление заявки.">
+  <title>DADAEV CAR | Аренда автомобилей</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="desktop-accent" aria-hidden="true"><span>DADAEV</span><small>CAR RENTAL EXPERIENCE</small></div>
+  <div id="app" class="app-shell">
+    <section class="screen splash active" data-screen="splash" aria-labelledby="splash-title">
+      <div class="shutter" aria-hidden="true"></div>
+      <div class="splash-grain" aria-hidden="true"></div>
+      <div class="splash-center">
+        <div class="splash-serial">01 / АВТОПРОКАТ</div>
+        <h1 id="splash-title">АРЕНДА АВТО<span>С DADAEV CAR</span></h1>
+      </div>
+      <div class="splash-bottom">
+        <div class="start-chevron" aria-hidden="true"><i></i><i></i></div>
+        <button type="button" id="startButton" class="start-button">Начать <span aria-hidden="true">↗</span></button>
+        <p id="startInfo">Выберите автомобиль и подготовьте заявку</p><a class="mini-whatsapp" id="whatsappCatalogSplash" href="#" target="_blank" rel="noopener noreferrer">Написать в WhatsApp</a>
+      </div>
+      <div class="splash-footside">DADAEV CAR · АВТОПРОКАТ</div>
+    </section>
+
+    <section class="screen" data-screen="catalog" aria-label="Каталог автомобилей">
+      <header class="app-header">
+        <div class="brand"><span class="brand-bars" aria-hidden="true"><i></i><i></i></span><span>DADAEV<span class="brand-light">CAR</span></span></div>
+        <div class="header-actions"><a class="round-icon header-wa" href="#" target="_blank" rel="noopener noreferrer" aria-label="Написать в WhatsApp" title="WhatsApp-каталог">WA</a>
+        <button type="button" class="round-icon" id="openHistoryTop" aria-label="Мои заявки" title="Мои заявки">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7zM15 3v5h5M10 12h6M10 16h6"/></svg>
+        </button></div>
+      </header>
+      <div class="catalog-content">
+        <div class="model-heading"><p class="eyebrow">КАТАЛОГ АВТОМОБИЛЕЙ <span id="carNumber">01 / 03</span></p><h2 id="carTitle">TOYOTA COROLLA</h2></div>
+        <div id="carSpecs" class="spec-grid" aria-live="polite"></div>
+        <div class="car-highlights">
+          <div class="glass-panel"><span class="muted">Статус</span><strong class="status-text">Уточняется</strong></div>
+          <div class="glass-panel"><span class="muted" id="priceLabel">За сутки</span><strong id="carPrice" class="price-text">По запросу</strong></div>
+        </div>
+        <div class="car-visual" id="carVisual">
+          <img id="carImage" src="assets/corolla.webp" alt="Toyota Corolla" draggable="false">
+          <div class="image-shade"></div>
+          <button type="button" id="prevCar" class="slide-arrow slide-arrow-left" aria-label="Предыдущий автомобиль"><span aria-hidden="true">❮</span></button>
+          <button type="button" id="nextCar" class="slide-arrow slide-arrow-right" aria-label="Следующий автомобиль"><span aria-hidden="true">❯</span></button>
+          <div class="slide-dots" id="slideDots" aria-label="Выбор автомобиля"></div>
+        </div>
+        <div class="booking-controls">
+          <div class="mode-tabs" role="group" aria-label="Режим аренды">
+            <button type="button" class="mode-tab selected" data-mode="daily" aria-pressed="true">Посуточно</button>
+            <button type="button" class="mode-tab" data-mode="weekly" aria-pressed="false">Понедельно</button>
+          </div>
+          <div class="date-pair">
+            <button type="button" class="date-button" data-date-open="pickup"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 14h3M14 14h3"/></svg><span><small>Получение</small><b id="pickupDisplay">Выбрать дату</b></span></button>
+            <button type="button" class="date-button" data-date-open="return"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 14h3M14 14h3"/></svg><span><small>Возврат</small><b id="returnDisplay">Выбрать дату</b></span></button>
+          </div>
+          <p id="rentalEstimate" class="rental-estimate">Укажите даты, чтобы рассчитать стоимость</p>
+          <button type="button" id="bookButton" class="gold-button">Оставить заявку <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+      <nav class="bottom-nav" aria-label="Навигация">
+        <button type="button" class="nav-item active" data-nav="catalog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l2-6h14l2 6v6h-2v-2H5v2H3v-6zM5 13h14M7 17v2M17 17v2M7 10h2M15 10h2"/></svg><span>Каталог</span></button>
+        <button type="button" class="nav-item" data-nav="history"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span>Мои заявки</span></button>
+      </nav>
+    </section>
+
+    <section class="screen" data-screen="form" aria-labelledby="formTitle">
+      <header class="app-header"><button type="button" class="back-button" data-back="catalog" aria-label="Вернуться к каталогу">←</button><div class="brand"><span class="brand-bars" aria-hidden="true"><i></i><i></i></span><span>DADAEV<span class="brand-light">CAR</span></span></div><span class="header-spacer"></span></header>
+      <div class="inner-scroll">
+        <p class="eyebrow section-kicker">ШАГ 02 / 04</p><h2 id="formTitle" class="page-title">Данные водителя</h2>
+        <p class="subtext">Контактная информация для заявки на аренду.</p>
+        <form id="driverForm" novalidate>
+          <label class="form-field"><span>Фамилия <em>*</em></span><input id="lastName" name="lastName" type="text" autocomplete="family-name" minlength="2" maxlength="70" placeholder="Иванов" required></label>
+          <label class="form-field"><span>Имя <em>*</em></span><input id="firstName" name="firstName" type="text" autocomplete="given-name" minlength="2" maxlength="70" placeholder="Иван" required></label>
+          <div class="form-row">
+            <label class="form-field"><span>Серия ВУ</span><input id="licenseSeries" name="licenseSeries" type="text" inputmode="numeric" maxlength="8" placeholder="0000" autocomplete="off"></label>
+            <label class="form-field"><span>Номер ВУ</span><input id="licenseNumber" name="licenseNumber" type="text" inputmode="numeric" maxlength="12" placeholder="000000" autocomplete="off"></label>
+          </div>
+          <label class="form-field"><span>Действует до</span><input id="licenseExpiry" class="date-input" type="text" placeholder="30.12.2022" inputmode="numeric" autocomplete="off" maxlength="10" aria-describedby="dateHint"><small id="dateHint">Формат даты: ДД.ММ.ГГГГ</small></label>
+          <label class="form-field"><span>Контактный телефон <em>*</em></span><input id="phoneNumber" name="phoneNumber" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 999 123-45-67" required></label>
+          <div class="form-notice"><strong>Как работает заявка</strong><span id="formNotice">Заявка сохраняется в этом браузере. Данные ВУ не сохраняются и не передаются.</span></div>
+          <label class="consent"><input id="agreeProcessing" type="checkbox" required><span>Согласен на сохранение истории заявки в этом браузере и подготовку её текста <em>*</em></span></label>
+          <label class="consent"><input id="agreeTerms" type="checkbox" required><span>Понимаю, что бронирование подтверждается только после согласования с менеджером <em>*</em></span></label>
+          <p id="formError" class="form-error" role="alert" hidden></p>
+          <button type="submit" class="gold-button">Проверить заявку <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="review" aria-labelledby="reviewTitle">
+      <header class="app-header"><button type="button" class="back-button" data-back="form" aria-label="Назад к форме">←</button><div class="brand"><span class="brand-bars" aria-hidden="true"><i></i><i></i></span><span>DADAEV<span class="brand-light">CAR</span></span></div><span class="header-spacer"></span></header>
+      <div class="inner-scroll review-scroll"><p class="eyebrow section-kicker">ШАГ 03 / 04</p><h2 id="reviewTitle" class="page-title">Проверьте заявку</h2><p class="subtext">Автомобиль будет забронирован только после подтверждения менеджером.</p>
+        <div class="review-preview"><img id="reviewImage" src="assets/corolla.webp" alt="Выбранный автомобиль"><div class="review-preview-overlay"><span>ВАШ ВЫБОР</span><strong id="reviewCarTitle">Toyota Corolla</strong></div></div>
+        <div id="reviewDetails" class="review-card"></div><p class="disclaimer">Модели автомобилей взяты из видеопримера; фактическое наличие, комплектация и стоимость требуют подтверждения менеджером.</p>
+        <p id="submitError" class="form-error" role="alert" hidden></p>
+        <button id="submitBooking" type="button" class="gold-button"><span id="reviewActionText">Сохранить заявку</span> <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="success" aria-labelledby="successTitle">
+      <header class="app-header"><span class="header-spacer"></span><div class="brand"><span class="brand-bars" aria-hidden="true"><i></i><i></i></span><span>DADAEV<span class="brand-light">CAR</span></span></div><span class="header-spacer"></span></header>
+      <div class="success-center"><span class="success-check">✓</span><p class="eyebrow">ШАГ 04 / 04</p><h2 id="successTitle" class="page-title">Откройте WhatsApp</h2><p id="successText" class="success-subtext">Заявка сохранена в этом браузере. Для передачи менеджеру скопируйте её текст.</p><div id="successSummary" class="success-summary"></div>
+        <a id="whatsappRetry" class="gold-button gold-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Открыть WhatsApp</a><button type="button" id="copyRequest" class="gold-button">Скопировать текст заявки</button><button type="button" id="openHistoryAfterSuccess" class="secondary-button">Мои заявки</button><button type="button" id="backToCatalog" class="link-button">Вернуться в каталог</button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="history" aria-labelledby="historyTitle">
+      <header class="app-header"><button type="button" class="back-button" data-back="catalog" aria-label="Вернуться в каталог">←</button><div class="brand"><span class="brand-bars" aria-hidden="true"><i></i><i></i></span><span>DADAEV<span class="brand-light">CAR</span></span></div><span class="header-spacer"></span></header>
+      <div class="inner-scroll"><p class="eyebrow section-kicker">ВАШИ ЗАЯВКИ</p><h2 class="page-title" id="historyTitle">Мой гараж</h2><p class="subtext">Черновики заявок, сохранённые на этом устройстве. Их передача менеджеру здесь не подтверждается.</p><div id="historyList" class="history-list"></div><button type="button" id="downloadJSON" class="secondary-button">Скачать заявки (.json)</button><button type="button" id="downloadCSV" class="secondary-button">Скачать заявки (.csv)</button><a id="whatsappCatalog" class="secondary-button catalog-link" href="#" target="_blank" rel="noopener noreferrer">Написать в WhatsApp</a><button type="button" id="historyGoCatalog" class="gold-button">Выбрать автомобиль</button></div>
+    </section>
+
+    <div id="dateModal" class="modal-backdrop" aria-hidden="true">
+      <div class="calendar-modal" role="dialog" aria-modal="true" aria-labelledby="calendarTitle">
+        <div class="modal-top"><div><p class="eyebrow">КАЛЕНДАРЬ</p><h3 id="calendarTitle">Выберите дату</h3></div><button type="button" id="closeCalendar" class="modal-close" aria-label="Закрыть календарь">×</button></div>
+        <label class="calendar-manual">Дата в формате ДД.ММ.ГГГГ<input id="manualDate" type="text" class="date-input" inputmode="numeric" maxlength="10" placeholder="30.12.2022" autocomplete="off"></label>
+        <div class="calendar-month"><button type="button" id="calendarPrev" aria-label="Предыдущий месяц">‹</button><strong id="calendarMonthName"></strong><button type="button" id="calendarNext" aria-label="Следующий месяц">›</button></div>
+        <div class="weekday-row" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+        <div id="calendarDays" class="calendar-days" role="grid" aria-label="Дни месяца"></div>
+        <p id="calendarError" class="form-error" role="alert" hidden></p>
+        <div class="calendar-actions"><button type="button" class="gold-button" id="confirmCalendar">Применить дату</button></div>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </div>
+  <p class="desktop-caption">ИНТЕРАКТИВНЫЙ КАТАЛОГ · DADAEV CAR</p>
+</body>
+</html>

@@ -3,10 +3,25 @@
   const WHATSAPP_NUMBER = String(window.DADAEV_CONFIG?.whatsappNumber || '').replace(/\D/g, '');
   const WHATSAPP_CATALOG = WHATSAPP_NUMBER ? `https://wa.me/${WHATSAPP_NUMBER}` : '';
   const STORAGE_KEY = 'dadaev-car-requests-v1';
+  // Частично восстановленный поисковый каталог: 16 из 18 карточек, НЕ подтверждённый актуальный автопарк.
+  // Фотографии, цены и характеристики из архива недоступны: никакие изображения не привязываем к конкретным машинам.
   const CARS = [
-    { id: 'corolla', name: 'TOYOTA COROLLA', shortName: 'Toyota Corolla', image: 'assets/corolla.webp', year: '2019', mileage: '48 320 км', engine: '1,8 л', drivetrain: 'Передний' },
-    { id: 'prius', name: 'TOYOTA PRIUS', shortName: 'Toyota Prius', image: 'assets/prius.webp', year: 'Уточняется', mileage: 'Уточняется', engine: 'Гибрид', drivetrain: 'Уточняется' },
-    { id: 'rav4', name: 'TOYOTA RAV4', shortName: 'Toyota RAV4', image: 'assets/rav4.webp', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' }
+    { id: "lc200", name: "TOYOTA LAND CRUISER 200", shortName: "Toyota Land Cruiser 200 (Restyling 2)", category: "Премиум", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "lexus570", name: "LEXUS 570", shortName: "Lexus 570", category: "Премиум", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "bmwx7", name: "BMW X7", shortName: "BMW X7", category: "Премиум", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "creta", name: "HYUNDAI CRETA", shortName: "Hyundai Creta", category: "Внедорожники", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "camry70se", name: "TOYOTA CAMRY 70 (SE)", shortName: "Toyota Camry 70 (SE)", category: "Бизнес", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "kiak5", name: "KIA K5", shortName: "Kia K5", category: "Бизнес", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "camry70", name: "TOYOTA CAMRY 70", shortName: "Toyota Camry 70", category: "Бизнес", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "camry55", name: "TOYOTA CAMRY 55", shortName: "Toyota Camry 55", category: "Бизнес", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "camry75", name: "TOYOTA CAMRY 75", shortName: "Toyota Camry 75", category: "Бизнес", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "octavia", name: "SKODA OCTAVIA", shortName: "Skoda Octavia", category: "Седаны", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "pologt", name: "VOLKSWAGEN POLO GT", shortName: "Volkswagen Polo GT", category: "Седаны", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "solaris2", name: "HYUNDAI SOLARIS II", shortName: "Hyundai Solaris II", category: "Седаны", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "polo", name: "VOLKSWAGEN POLO", shortName: "Volkswagen Polo", category: "Седаны", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "rio", name: "KIA RIO", shortName: "Kia Rio", category: "Седаны", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "solaris", name: "HYUNDAI SOLARIS", shortName: "Hyundai Solaris", category: "Седаны", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "starex", name: "HYUNDAI GRAND STAREX", shortName: "Hyundai Grand Starex", category: "Минивэны", image: 'assets/car-placeholder.svg', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' }
   ];
   const $ = id => document.getElementById(id);
   const $$ = selector => [...document.querySelectorAll(selector)];
@@ -42,9 +57,10 @@
     const car = currentCar();
     $('carTitle').textContent = car.name;
     $('carNumber').textContent = `${String(state.carIndex + 1).padStart(2, '0')} / ${String(CARS.length).padStart(2, '0')}`;
-    $('carImage').src = car.image; $('carImage').alt = car.shortName;
+    $('carImage').src = car.image; $('carImage').alt = `Фотография ${car.shortName} пока не получена`;
+    $('carCategory').textContent = car.category;
     $('carSpecs').replaceChildren();
-    [['Год', car.year], ['Пробег', car.mileage], ['Объём / тип', car.engine], ['Привод', car.drivetrain]].forEach(([title, value]) => {
+    [['Категория', car.category], ['Год', car.year], ['Двигатель', car.engine], ['КПП', 'Уточняется']].forEach(([title, value]) => {
       const card = document.createElement('div'); card.className = 'glass-panel';
       const label = document.createElement('span'); label.className = 'muted'; label.textContent = title;
       const bold = document.createElement('strong'); bold.textContent = value;
@@ -154,7 +170,7 @@
     };
   }
   function renderReview(request) {
-    $('reviewImage').src = currentCar().image; $('reviewImage').alt = request.car;
+    $('reviewImage').src = currentCar().image; $('reviewImage').alt = `Фотография ${request.car} пока не получена`;
     $('reviewCarTitle').textContent = request.car;
     const details = $('reviewDetails'); details.replaceChildren();
     const heading = document.createElement('h3'); heading.textContent = request.car; details.append(heading);

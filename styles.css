@@ -38,3 +38,6 @@
 .splash-social-links .mini-whatsapp,.splash-social-links .mini-telegram{font-size:12px;line-height:1.25;margin:0;padding:3px 1px 4px;text-decoration:none;font-weight:650}
 .splash-social-links .mini-telegram{color:#98d8f3;border-bottom:1px solid #7bbbd591}
 .splash-social-links a:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
+
+/* Use authentic image crop for photos, keep vector placeholder contained. */
+.car-visual img.has-photo,.review-preview>img.has-photo{object-fit:cover;object-position:center center}

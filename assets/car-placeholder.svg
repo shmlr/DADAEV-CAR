@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="690" viewBox="0 0 1000 690" role="img" aria-label="Фотография автомобиля пока не подтверждена">
+  <defs><radialGradient id="bg"><stop offset="0" stop-color="#3e352c"/><stop offset="1" stop-color="#161513"/></radialGradient><linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9cf7a"/><stop offset="1" stop-color="#a77a3e"/></linearGradient></defs>
+  <rect width="1000" height="690" fill="url(#bg)"/>
+  <path d="M0 86H1000M0 600H1000" stroke="#aa8b5240" stroke-width="2"/>
+  <g fill="none" stroke="url(#stroke)" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" opacity=".9">
+    <path d="M169 385c20-16 52-24 81-26l90-99c14-16 31-23 54-23h235c29 0 53 10 70 31l74 90c39 4 61 20 72 40l9 52H150l9-45Z"/>
+    <path d="M291 351h429M383 239l-42 111M654 241l63 110"/>
+    <circle cx="318" cy="451" r="52"/><circle cx="716" cy="451" r="52"/>
+  </g>
+  <text x="500" y="572" text-anchor="middle" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#f0c779" letter-spacing="2">ФОТО УТОЧНЯЕТСЯ</text>
+  <text x="500" y="616" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#b8aa93" letter-spacing="2">DADAEV CAR · АРХИВНЫЙ КАТАЛОГ</text>
+</svg>

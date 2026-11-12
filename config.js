@@ -1,6 +1,5 @@
-// Optional integration. Add a verified business WhatsApp number in international format,
-// for example "7XXXXXXXXXX". Until configured, users can copy their requests.
-// Do not place secrets or API keys in files hosted by GitHub Pages.
+// Publicly listed DadaevCar WhatsApp contact; users manually send the prepared message.
+// Keep secrets and API credentials out of GitHub Pages.
 window.DADAEV_CONFIG = {
-  whatsappNumber: "",
+  whatsappNumber: "79285015533",
 };

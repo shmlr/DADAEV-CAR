@@ -66,3 +66,6 @@
 
 /* Attribution for Wikimedia Commons examples */
 .photo-credits-link{display:block;text-align:center;color:#c9b48f;font-size:11px;padding:0 12px;margin:0 0 10px;text-decoration:underline;text-underline-offset:3px}
+
+/* Explicit AI-illustration disclosure in each vehicle photo */
+.car-photo-label{position:absolute;top:12px;left:12px;z-index:2;border:1px solid #c5aa7790;background:#15120fc9;color:#ffe4ae;box-shadow:0 2px 8px #0007;border-radius:7px;padding:6px 9px;font-size:11px;font-weight:700;letter-spacing:.01em;pointer-events:none}

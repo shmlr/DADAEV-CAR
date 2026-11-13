@@ -8,19 +8,20 @@
   const CARS = [
     { id: "lc200", name: "TOYOTA LAND CRUISER 200", shortName: "Toyota Land Cruiser 200 (Restyling 2)", category: "Премиум", image: 'assets/cars/illustrative-lc200.webp', illustrative: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
     { id: "lexus570", name: "LEXUS 570", shortName: "Lexus 570", category: "Премиум", image: 'assets/cars/illustrative-lexus570.webp', illustrative: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
-    { id: "bmwx7", name: "BMW X7", shortName: "BMW X7", category: "Премиум", image: 'assets/cars/illustrative-bmwx7.webp', illustrative: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
-    { id: "creta", name: "HYUNDAI CRETA", shortName: "Hyundai Creta", category: "Внедорожники", image: 'assets/cars/hyundai-creta.webp', sourcePost: 93, photoMatch: 'caption', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "bmwx7", name: "BMW X7", shortName: "BMW X7", category: "Премиум", image: 'assets/cars/edited-bmwx7.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "creta", name: "HYUNDAI CRETA", shortName: "Hyundai Creta", category: "Внедорожники", image: 'assets/cars/edited-creta.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "sorento", name: "KIA SORENTO", shortName: "Kia Sorento", category: "Внедорожники", image: 'assets/cars/edited-sorento.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
     { id: "camry70se", name: "TOYOTA CAMRY 70 (SE)", shortName: "Toyota Camry 70 (SE)", category: "Бизнес", image: 'assets/cars/illustrative-camry70se.webp', illustrative: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
     { id: "kiak5", name: "KIA K5", shortName: "Kia K5", category: "Бизнес", image: 'assets/cars/illustrative-kiak5.webp', illustrative: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
     { id: "camry70", name: "TOYOTA CAMRY 70", shortName: "Toyota Camry 70", category: "Бизнес", image: 'assets/cars/illustrative-camry70.webp', illustrative: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
-    { id: "camry55", name: "TOYOTA CAMRY 55", shortName: "Toyota Camry 55", category: "Бизнес", image: 'assets/cars/toyota-camry-55.webp', sourcePost: 113, photoMatch: 'visual', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
-    { id: "camry75", name: "TOYOTA CAMRY 75", shortName: "Toyota Camry 75", category: "Бизнес", image: 'assets/cars/toyota-camry-75.webp', sourcePost: 103, photoMatch: 'caption', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "camry55", name: "TOYOTA CAMRY 55", shortName: "Toyota Camry 55", category: "Бизнес", image: 'assets/cars/edited-camry55.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "camry75", name: "TOYOTA CAMRY 75", shortName: "Toyota Camry 75", category: "Бизнес", image: 'assets/cars/edited-camry75.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
     { id: "octavia", name: "SKODA OCTAVIA", shortName: "Skoda Octavia", category: "Седаны", image: 'assets/cars/illustrative-octavia.webp', illustrative: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
-    { id: "pologt", name: "VOLKSWAGEN POLO GT", shortName: "Volkswagen Polo GT", category: "Седаны", image: 'assets/cars/illustrative-pologt.webp', illustrative: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
-    { id: "solaris2", name: "HYUNDAI SOLARIS II", shortName: "Hyundai Solaris II", category: "Седаны", image: 'assets/cars/hyundai-solaris-ii.webp', sourcePost: 64, photoMatch: 'caption', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
-    { id: "polo", name: "VOLKSWAGEN POLO", shortName: "Volkswagen Polo", category: "Седаны", image: 'assets/cars/volkswagen-polo.webp', sourcePost: 74, photoMatch: 'visual', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
-    { id: "rio", name: "KIA RIO", shortName: "Kia Rio", category: "Седаны", image: 'assets/cars/illustrative-rio.webp', illustrative: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
-    { id: "solaris", name: "HYUNDAI SOLARIS", shortName: "Hyundai Solaris", category: "Седаны", image: 'assets/cars/hyundai-solaris.webp', sourcePost: 84, photoMatch: 'caption', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "pologt", name: "VOLKSWAGEN POLO GT", shortName: "Volkswagen Polo GT", category: "Седаны", image: 'assets/cars/edited-pologt.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "solaris2", name: "HYUNDAI SOLARIS II", shortName: "Hyundai Solaris II", category: "Седаны", image: 'assets/cars/edited-solaris2.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "polo", name: "VOLKSWAGEN POLO", shortName: "Volkswagen Polo", category: "Седаны", image: 'assets/cars/edited-polo.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "rio", name: "KIA RIO", shortName: "Kia Rio", category: "Седаны", image: 'assets/cars/edited-rio.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
+    { id: "solaris", name: "HYUNDAI SOLARIS", shortName: "Hyundai Solaris", category: "Седаны", image: 'assets/cars/edited-solaris.webp', generated: true, year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' },
     { id: "starex", name: "HYUNDAI GRAND STAREX", shortName: "Hyundai Grand Starex", category: "Минивэны", image: 'assets/cars/hyundai-grand-starex.webp', sourcePost: 121, photoMatch: 'visual', year: 'Уточняется', mileage: 'Уточняется', engine: 'Уточняется', drivetrain: 'Уточняется' }
   ];
   const $ = id => document.getElementById(id);
@@ -58,14 +59,19 @@
     $('carTitle').textContent = car.name;
     $('carNumber').textContent = `${String(state.carIndex + 1).padStart(2, '0')} / ${String(CARS.length).padStart(2, '0')}`;
     $('carImage').src = car.image;
-    $('carImage').alt = car.illustrative
-      ? `Иллюстративное фото модели ${car.shortName}, не фактический автомобиль DADAEV CAR`
-      : `Фото ${car.shortName} из Telegram DadaevCAR`;
+    $('carImage').alt = car.generated
+      ? `Изображение модели ${car.shortName}, созданное ИИ, не фото конкретной машины автопроката`
+      : car.illustrative
+        ? `Иллюстративное фото модели ${car.shortName}, не фактический автомобиль DADAEV CAR`
+        : `Фото ${car.shortName} из Telegram DadaevCAR`;
+    $('carPhotoLabel').textContent = car.generated ? 'Иллюстрация · ИИ' : car.illustrative ? 'Фото модели' : 'Фото из Telegram';
     $('carImage').classList.toggle('has-photo', !car.image.endsWith('car-placeholder.svg'));
     $('carCategory').textContent = car.category;
-    $('archiveNote').textContent = car.illustrative
-      ? 'Фото модели для примера, не автомобиль автопроката DADAEV CAR. Наличие и комплектацию уточняйте в WhatsApp.'
-      : `Фото: Telegram @dadaevcar, публикация №${car.sourcePost}. ${car.photoMatch === 'visual' ? 'Модель определена по изображению, требует сверки.' : 'Модель указана в публикации.'} Наличие уточняйте в WhatsApp.`;
+    $('archiveNote').textContent = car.generated
+      ? 'Визуализация модели, созданная ИИ по образцу из каталога. Может отличаться от реальной машины. Наличие и условия уточняйте у менеджера.'
+      : car.illustrative
+        ? 'Фото модели для примера, не автомобиль автопроката DADAEV CAR. Наличие и комплектацию уточняйте в WhatsApp.'
+        : `Фото: Telegram @dadaevcar, публикация №${car.sourcePost}. ${car.photoMatch === 'visual' ? 'Модель определена по изображению, требует сверки.' : 'Модель указана в публикации.'} Наличие уточняйте в WhatsApp.`;
     $('carSpecs').replaceChildren();
     [['Категория', car.category], ['Год', car.year], ['Двигатель', car.engine], ['КПП', 'Уточняется']].forEach(([title, value]) => {
       const card = document.createElement('div'); card.className = 'glass-panel';
@@ -178,9 +184,11 @@
   }
   function renderReview(request) {
     $('reviewImage').src = currentCar().image;
-    $('reviewImage').alt = currentCar().illustrative
-      ? `Иллюстрация модели ${request.car}, не фактический автомобиль проката`
-      : `Фото ${request.car} из Telegram DadaevCAR`;
+    $('reviewImage').alt = currentCar().generated
+      ? `Изображение ${request.car}, созданное ИИ, не фото конкретной машины проката`
+      : currentCar().illustrative
+        ? `Иллюстрация модели ${request.car}, не фактический автомобиль проката`
+        : `Фото ${request.car} из Telegram DadaevCAR`;
     $('reviewImage').classList.toggle('has-photo', !currentCar().image.endsWith('car-placeholder.svg'));
     $('reviewCarTitle').textContent = request.car;
     const details = $('reviewDetails'); details.replaceChildren();
